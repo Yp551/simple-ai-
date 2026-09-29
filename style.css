@@ -1,0 +1,303 @@
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page */
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 150, 255, 0.25),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(150, 50, 255, 0.25),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #050816,
+            #0b1026,
+            #111936
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+
+    text-align: center;
+}
+
+
+/* Main title */
+h1 {
+    font-size: 70px;
+
+    margin-bottom: 10px;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00d4ff,
+            #7b61ff,
+            #ff4ecd
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Subtitle */
+.subtitle {
+    font-size: 18px;
+
+    color: #b8c1d9;
+
+    margin-bottom: 40px;
+}
+
+
+/* Search area */
+.search-area {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* Search box */
+.search-box {
+    width: 600px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 12px 0 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(15px);
+
+    transition: 0.3s;
+}
+
+
+/* Search box focus effect */
+.search-box:focus-within {
+    border-color: #00d4ff;
+
+    box-shadow:
+        0 0 20px rgba(0, 212, 255, 0.2);
+
+    transform: translateY(-2px);
+}
+
+
+/* Search icon */
+.search-icon {
+    font-size: 30px;
+
+    color: #aeb8d0;
+
+    margin-right: 12px;
+}
+
+
+/* Input */
+.search-box input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 17px;
+}
+
+
+/* Placeholder */
+.search-box input::placeholder {
+    color: #9ca7c2;
+}
+
+
+/* Microphone button */
+.mic-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+
+/* Microphone hover */
+.mic-btn:hover {
+    background: rgba(0, 212, 255, 0.2);
+
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 15px rgba(0, 212, 255, 0.4);
+}
+
+
+/* Search button */
+.search-btn {
+    height: 58px;
+
+    padding: 0 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00c6ff,
+            #7b61ff
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 5px 20px rgba(0, 120, 255, 0.2);
+}
+
+
+/* Search button hover */
+.search-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+
+    box-shadow:
+        0 8px 25px rgba(0, 180, 255, 0.4);
+}
+
+
+/* Suggestions */
+.suggestions {
+    margin-top: 35px;
+
+    color: #8f9bb7;
+
+    font-size: 14px;
+}
+
+
+/* Suggestion buttons */
+.suggestions button {
+    margin-left: 10px;
+
+    padding: 8px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #cbd3e8;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Suggestion hover */
+.suggestions button:hover {
+    background: rgba(123, 97, 255, 0.2);
+
+    border-color: #7b61ff;
+}
+
+
+/* Mobile responsive */
+@media (max-width: 750px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .search-area {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-btn {
+        width: 180px;
+    }
+
+    .suggestions button {
+        margin-top: 10px;
+    }
+}
